@@ -18,21 +18,23 @@ Quick start
 
 #### From source ####
 
-        docker build -t virtualpdu-container .
-        docker run virtualpdu-container
+    docker build -t virtualpdu-container .
+    docker run virtualpdu-container
 
 #### From Docker Hub ####
 
-        docker run internap/virtualpdu-container:latest
+    docker run internap/virtualpdu-container:latest
 
 
 ### Using Docker-Compose ###
 
 #### From source ####
-        docker-compose up --build
+
+    docker-compose up --build
         
 #### From Docker Hub ####
-	    docker-compose -f docker-compose.yml -f docker-compose.prebuilt.yml up -d
+
+    docker-compose -f docker-compose.yml -f docker-compose.prebuilt.yml up -d
 
         
 Configuration
