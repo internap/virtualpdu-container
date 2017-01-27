@@ -14,8 +14,7 @@
 
 FROM python:3.5-alpine
 
-RUN apk update && \
-    apk add --no-cache python3-dev gcc git g++ make libvirt-dev
+RUN apk add --no-cache python3-dev gcc git g++ make libvirt-dev
 
 ENV VIRTUALPDU_RELEASE 0.3.5
 RUN pip install --no-cache-dir "virtualpdu==$VIRTUALPDU_RELEASE"
