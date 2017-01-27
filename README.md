@@ -18,12 +18,12 @@ Quick start
 
 #### From source ####
 
-    $ docker build -t virtualpdu-container .
-    $ docker run virtualpdu-container
+    $ docker build -t virtualpdu .
+    $ docker run virtualpdu
 
 #### From Docker Hub ####
 
-    $ docker run internap/virtualpdu-container:latest
+    $ docker run internap/virtualpdu:latest
 
 
 ### Using Docker-Compose ###

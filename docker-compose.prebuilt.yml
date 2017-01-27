@@ -3,8 +3,8 @@ version: '2'
 
 services:
   virtualpdu_1:
-    image: internap/virtualpdu-container:latest
+    image: internap/virtualpdu:latest
   virtualpdu_2:
-    image: internap/virtualpdu-container:latest
+    image: internap/virtualpdu:latest
   virtualpdu_3:
-    image: internap/virtualpdu-container:latest
+    image: internap/virtualpdu:latest
