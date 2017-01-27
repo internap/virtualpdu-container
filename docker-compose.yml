@@ -1,0 +1,34 @@
+---
+version: '2'
+
+services:
+  virtualpdu_1:
+    build: .
+    ports:
+     - '9997:9997/udp'
+    environment:
+      config: |
+        [global]
+        libvirt_uri=test:///default
+
+        [my_second_pdu]
+        listen_address=0.0.0.0
+        listen_port=9997
+        community=public
+        ports=2:test
+  virtualpdu_2:
+    build: .
+    ports:
+     - '9998:9998/udp'
+    environment:
+      libvirt_uri: test:///default
+      listen_address: 0.0.0.0
+      listen_port: 9998
+      community: public
+      ports: 5:test,6:test2
+  virtualpdu_3:
+    build: .
+    ports:
+     - '9999:161/udp'
+    environment:
+      community: private
