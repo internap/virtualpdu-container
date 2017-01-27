@@ -11,8 +11,34 @@ the ability simulates the following PDUs:
  - [Baytech MRP27 PDU](https://github.com/openstack/virtualpdu/blob/master/virtualpdu/pdu/baytech_mrp27.py)
 
 
-Usage
------
+Quick start
+-----------
+
+### Using Docker ###
+
+#### From source ####
+
+    $ docker build -t virtualpdu-container .
+    $ docker run virtualpdu-container
+
+#### From Docker Hub ####
+
+    $ docker run internap/virtualpdu-container:latest
+
+
+### Using Docker-Compose ###
+
+#### From source ####
+
+    $ docker-compose up --build
+        
+#### From Docker Hub ####
+
+    $ docker-compose -f docker-compose.yml -f docker-compose.prebuilt.yml up -d
+
+        
+Configuration
+-------------
 
 To configure the service, some environment variables must be set.
 It is possible to pass a complete configuration to simulate
