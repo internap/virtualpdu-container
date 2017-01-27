@@ -14,8 +14,8 @@ the ability simulates the following PDUs:
 Usage
 -----
 
-To configure the service, some environmental variables must be
-set.  It is possible to pass a complete configuration to simulate
+To configure the service, some environment variables must be set.
+It is possible to pass a complete configuration to simulate
 multiple units or only the settings to override if there is only one
 unit to simulate.
 
@@ -79,11 +79,11 @@ declared as an environment variable.
 Advanced usage with [libvirt](http://libvirt.org/)
 --------------------------------------------------
 
-By default, turning on or off the power outlet of a PDU does nothing but
-if a [proper `libvirt_uri`](http://libvirt.org/uri.html) is defied, and
-an association `outlet:domain` is provided to the `ports` environment
-variable, the libvirt domain will be started or stopped depending of the
-outlet state.
+By default, the simulator will not interact with outside resources, unless
+a [proper `libvirt_uri`](http://libvirt.org/uri.html) is defined, and
+a `outlet:domain` mapping is provided in the `ports` environment variable.
+In that case, the corresponding libvirt domain will be started and stopped
+based on the outlet state.
 
 This container image does not provide a libvirt-server, it's up to the
-user to provide its own libvirt provider.
+user to provide their own libvirt provider.
